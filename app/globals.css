@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-xs leading-6 antialiased;
+    @apply leading-6 antialiased;
   }
   :-moz-selection {
     @apply bg-green text-white;

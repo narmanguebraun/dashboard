@@ -330,7 +330,7 @@ const Board: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex gap-1 p-6 flex-row overflow-x-scroll  leading-5">
+    <div className="flex gap-1 p-6 flex-row overflow-x-scroll text-xs leading-5">
       <Column
         title="Monday"
         column="monday"
@@ -370,7 +370,7 @@ export default function Weekly() {
   return (
     <div className="max-w-7xl m-auto flex justify-center py-12">
       <div>
-        <h1 className="uppercase text-center p-6">Weekly</h1>
+        <h1 className="text-center text-sm p-6">Weekly</h1>
         <Board />
       </div>
     </div>
