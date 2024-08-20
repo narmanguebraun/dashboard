@@ -368,7 +368,7 @@ const Board: React.FC = () => {
 
 export default function Weekly() {
   return (
-    <div className="max-w-7xl m-auto flex justify-center py-12">
+    <div className="max-w-7xl m-auto flex justify-center">
       <div>
         <h1 className="text-center text-sm p-6">Weekly</h1>
         <Board />
