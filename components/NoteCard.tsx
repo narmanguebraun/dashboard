@@ -13,7 +13,7 @@ interface CardProps {
   column: string; // The column the card belongs to
   handleDragStart: (
     e: DragEvent<HTMLDivElement>,
-    card: { title: string; id: string; column: string }
+    card: { title: string; id: string; column: string },
   ) => void; // The function that handles the drag start event
 }
 
@@ -41,7 +41,7 @@ export default function NoteCard({
             column,
           })
         }
-        className="cursor-grab rounded border border-gray05 bg-gray06 px-3 py-2 active:cursor-grabbing mt-1"
+        className="mt-1 cursor-grab rounded border border-gray05 bg-gray06 px-3 py-2 active:cursor-grabbing"
       >
         <div className="text-gray02">{title}</div>
       </motion.div>

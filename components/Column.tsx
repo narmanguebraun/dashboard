@@ -49,7 +49,7 @@ export default function Column({
 
   const getNearestIndicator = (
     e: DragEvent<HTMLDivElement>,
-    indicators: HTMLElement[]
+    indicators: HTMLElement[],
   ) => {
     const DISTANCE_OFFSET = 50;
 
@@ -67,7 +67,7 @@ export default function Column({
       {
         offset: Number.NEGATIVE_INFINITY,
         element: indicators[indicators.length - 1],
-      }
+      },
     );
 
     return el;
@@ -75,7 +75,7 @@ export default function Column({
 
   const getIndicators = (): HTMLElement[] => {
     return Array.from(
-      document.querySelectorAll(`[data-column="${column}"]`)
+      document.querySelectorAll(`[data-column="${column}"]`),
     ) as HTMLElement[];
   };
 

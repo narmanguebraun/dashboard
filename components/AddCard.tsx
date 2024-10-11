@@ -45,7 +45,7 @@ export default function AddCard({ column, setCards }: AddCardProps) {
             onClick={() => setAdding(false)}
             autoFocus
             placeholder="What's the plan?"
-            className="w-full rounded border mt-1 border-gray04 bg-dark px-3 py-2 text-gray01 placeholder-gray04 focus:outline-0"
+            className="mt-1 w-full rounded border border-gray04 bg-dark px-3 py-2 text-gray01 placeholder-gray04 focus:outline-0"
           />
           <div className="mt-2 flex items-center justify-end gap-2">
             <motion.button
@@ -65,7 +65,7 @@ export default function AddCard({ column, setCards }: AddCardProps) {
       ) : (
         <button
           onClick={() => setAdding(true)}
-          className="bg-black flex w-full items-center gap-2 rounded border border-gray06 px-3 py-2 text-gray06 mt-1"
+          className="mt-1 flex w-full items-center gap-2 rounded border border-gray06 bg-black px-3 py-2 text-gray06"
         >
           Add new
         </button>

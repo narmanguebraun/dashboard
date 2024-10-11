@@ -23,7 +23,7 @@ const Board: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex gap-1 p-6 flex-row overflow-x-scroll text-xs leading-5">
+    <div className="flex flex-row gap-1 overflow-x-scroll p-6 text-xs leading-5">
       <Column
         title="Monday"
         column="monday"
