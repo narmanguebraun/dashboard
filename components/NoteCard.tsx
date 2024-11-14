@@ -3,28 +3,20 @@
 import { DragEvent } from "react";
 
 import DropIndicator from "./DropIndicator";
-
 import { motion } from "framer-motion";
 import { Card } from "@/types";
 
 interface CardProps {
-  title: string; // The title of the card
-  id: string; // The unique identifier for the card
-  column: string; // The column the card belongs to
-  handleDragStart: (
-    e: DragEvent<HTMLDivElement>,
-    card: { title: string; id: string; column: string },
-  ) => void; // The function that handles the drag start event
+  column: Card["column"];
+  id: Card["id"];
+  title: Card["title"];
+  handleDragStart: (e: DragEvent<HTMLDivElement>, card: Card) => void;
 }
 
-const handleDragStart = (e: React.DragEvent<HTMLDivElement>, card: Card) => {
-  e.dataTransfer.setData("cardId", card.id);
-};
-
 export default function NoteCard({
-  title,
-  id,
   column,
+  id,
+  title,
   handleDragStart,
 }: CardProps) {
   return (

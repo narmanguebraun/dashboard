@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Column from "./Column";
+
 import BurnBarrel from "./BunBarrel";
+import Column from "./Column";
+
 import { Card } from "@/types";
 
 const Board: React.FC = () => {

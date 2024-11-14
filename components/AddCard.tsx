@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/types";
 
 interface AddCardProps {
-  column: string; // The column to which the new card will be added
+  column: Card["column"]; // The column to which the new card will be added
   setCards: Dispatch<SetStateAction<Card[]>>; // Function to update the list of cards
 }
 

@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Dispatch, SetStateAction, DragEvent } from "react";
+import { Dispatch, DragEvent, SetStateAction, useState } from "react";
 
 import { Card } from "@/types";
 

@@ -1,6 +1,8 @@
+import { Card } from "@/types";
+
 interface DropIndicatorProps {
   beforeId?: string; // Optional; the ID of the item before which the drop indicator should appear
-  column: string; // The column the drop indicator is associated with
+  column: Card["column"]; // The column the drop indicator is associated with
 }
 
 export default function DropIndicator({

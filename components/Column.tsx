@@ -1,23 +1,23 @@
 "use client";
 
-import { useState } from "react";
-import { DragEvent } from "react";
+import { useState, DragEvent } from "react";
 
-import { Card } from "@/types";
-import DropIndicator from "./DropIndicator";
 import AddCard from "./AddCard";
+import DropIndicator from "./DropIndicator";
 import NoteCard from "./NoteCard";
 
+import { Card } from "@/types";
+
 interface ColumnProps {
-  title: string; // Title of the column
-  column: string; // Identifier for the column
+  column: Card["column"];
+  title: Card["title"];
   cards: Card[]; // Array of card objects associated with the column
   setCards: React.Dispatch<React.SetStateAction<Card[]>>; // Function to update the list of cards
 }
 
 export default function Column({
-  title,
   column,
+  title,
   cards,
   setCards,
 }: ColumnProps) {
@@ -117,7 +117,7 @@ export default function Column({
       setCards(copy);
     }
   };
-  const filteredCards = cards.filter((c) => c.column === column);
+  const filteredCards = cards.filter((card) => card.column === column);
 
   return (
     <div className="w-52 shrink-0 px-0">
@@ -130,9 +130,13 @@ export default function Column({
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
       >
-        {filteredCards.map((c) => {
+        {filteredCards.map((card) => {
           return (
-            <NoteCard key={c.id} {...c} handleDragStart={handleDragStart} />
+            <NoteCard
+              key={card.id}
+              {...card}
+              handleDragStart={handleDragStart}
+            />
           );
         })}
         <DropIndicator beforeId="-1" column={column} />

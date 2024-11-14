@@ -1,5 +1,5 @@
-export interface Card {
+export type Card = {
+  column: string;
   id: string;
   title: string;
-  column: string;
-}
+};
